@@ -21,11 +21,11 @@ use tokio_codec::{Decoder, FramedRead};
 
 /// A response returned by the HTTP client.
 ///
-type AsyncResponse<T> = Box<Future<Item = T, Error = Error> + Send + 'static>;
+type AsyncResponse<T> = Box<Future<Item = T, Error = Error> + Send>;
 
 /// A future that returns a stream of responses.
 ///
-type AsyncStreamResponse<T> = Box<Stream<Item = T, Error = Error> + Send + 'static>;
+type AsyncStreamResponse<T> = Box<Stream<Item = T, Error = Error> + Send>;
 
 /// Asynchronous Ipfs client.
 ///
